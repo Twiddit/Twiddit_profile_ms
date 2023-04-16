@@ -4,3 +4,5 @@ djangorestframework==3.14.0
 protobuf==3.20.3
 psycopg2-binary==2.9.5
 sqlparse==0.4.3
+pika
+requests
