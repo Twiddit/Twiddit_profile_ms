@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-cp^zu&_ie(l1ns3u+lscp1k-8yr1#v7+qx3%t!#zg$brrou1j2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.17.0.1']
+ALLOWED_HOSTS = ['172.17.0.1', 'localhost']
 
 
 # Application definition
@@ -44,7 +44,8 @@ THIRD_APPS = [
 ]
 
 LOCAL_APPS = [
-    'apps.Twiddit_profile'
+    'apps.Twiddit_profile',
+    'apps.Twiddit_notifications'
 ]
 
 INSTALLED_APPS = BASE_APPS + THIRD_APPS + LOCAL_APPS

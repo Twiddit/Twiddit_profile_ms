@@ -18,4 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('profile/', include('apps.Twiddit_profile.api.urls')),
+    path('notifications/', include('apps.Twiddit_notifications.api.urls')),
 ]
