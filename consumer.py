@@ -2,7 +2,7 @@
 import pika, sys, os, requests
 
 def connectConsumer():
-    connection = pika.BlockingConnection(pika.ConnectionParameters(host='172.17.0.1'))
+    connection = pika.BlockingConnection(pika.ConnectionParameters(host='34.138.201.211'))
     channel = connection.channel()
 
     channel.queue_declare(queue='notifications')
@@ -11,7 +11,7 @@ def connectConsumer():
         data = body.decode()
         data = data.split(".")
         data = {'followerId': data[0], 'followedId':data[1]}
-        url = "http://172.17.0.1:7777/notifications/createNotification/"
+        url = "http://34.138.201.211:7777/notifications/createNotification/"
         requests.post(url, json=data)
         print(" [x] Received %r" % body)
 
