@@ -87,10 +87,11 @@ WSGI_APPLICATION = 'Twiddit_profile_ms.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'eqjghirh',
-        'USER': 'eqjghirh',
-        'PASSWORD': '8p3PcYs0DMMVD9M8EIaed4igiG97BkGN',
-        'HOST': 'isilo.db.elephantsql.com'
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT'),
     }
 }
 
