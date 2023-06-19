@@ -2,7 +2,7 @@
 import pika, sys, os, requests
 
 def connectConsumer():
-    connection = pika.BlockingConnection(pika.ConnectionParameters(host='34.138.201.211'))
+    connection = pika.BlockingConnection(pika.ConnectionParameters(host=os.environ.get('RABBITMQ')))
     channel = connection.channel()
 
     channel.queue_declare(queue='notifications')

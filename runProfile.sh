@@ -1,2 +1,2 @@
-docker build -t twiddit_profile_ms .
-docker run -d -p 7777:7777 -e URL=0.0.0.0:7777 twiddit_profile_ms
+docker build -t twiddit-profile-ms .
+docker run -d -p 7777:7777 -e DB_NAME='eqjghirh' -e DB_USER=eqjghirh -e DB_PASSWORD=8p3PcYs0DMMVD9M8EIaed4igiG97BkGN -e DB_HOST=isilo.db.elephantsql.com -e RABBITMQ=34.138.201.211 -e URL=0.0.0.0:7777 twiddit-profile-ms
